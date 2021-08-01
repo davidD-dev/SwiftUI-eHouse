@@ -57,13 +57,16 @@ struct OnboardingView: View {
     //MARK:- utils
 
     func animateView() {
-        withAnimation(.linear(duration: 2)) {
-            animateLogin.toggle()
+        DispatchQueue.main.async {
+            withAnimation(.linear(duration: 2)) {
+                animateLogin.toggle()
+            }
+            
+            withAnimation(Animation.interpolatingSpring(stiffness: 40, damping: 8)) {
+                animate.toggle()
+            }
         }
-        
-        withAnimation(Animation.interpolatingSpring(stiffness: 40, damping: 8)) {
-            animate.toggle()
-        }
+ 
     }
 }
 

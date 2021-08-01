@@ -12,24 +12,28 @@ struct PasswordRsetView: View {
     @State private var email: String = ""
     @State private var showAlert: Bool = false
     var body: some View {
-        VStack(alignment: .leading) {
-            ScreenTitle("Forgot password ?")
-            Text("PLease enter your email below to receive your password reset instructions.")
-                .foregroundColor(.text)
-                .padding(.horizontal, 20)
-            EmailField(email: $email)
-                .padding(20)
-            Button(action: { showAlert.toggle() }){
-                Text("SEND REQUEST")
-                    .bold()
-                    .textStyle(GradientButtonStyle())
-                    
-            }
-            Spacer()
+        ZStack {
+            AnimatedWaveBackground()
             
+            VStack(alignment: .leading) {
+                ScreenTitle("Forgot password ?")
+                Text("PLease enter your email below to receive your password reset instructions.")
+                    .foregroundColor(.text)
+                    .padding(.horizontal, 20)
+                EmailField(email: $email)
+                    .padding(20)
+                Button(action: { showAlert.toggle() }){
+                    Text("SEND REQUEST")
+                        .bold()
+                        .textStyle(GradientButtonStyle())
+                        
+                }
+                Spacer()
+                
+            }
+            .alert(isPresented: $showAlert) {
+                displayAlert()
         }
-        .alert(isPresented: $showAlert) {
-            displayAlert()
         }
     }
     

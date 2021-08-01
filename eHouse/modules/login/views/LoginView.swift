@@ -54,7 +54,7 @@ struct LoginView: View {
     private func animateViews() {
         DispatchQueue.main.async {
             withAnimation(.easeIn(duration: animationDuration).delay(animationDelay)) {
-                animateLogin.toggle()
+                animateLogin = true
             }
         }
     }

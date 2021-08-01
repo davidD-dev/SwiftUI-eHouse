@@ -67,13 +67,13 @@ struct LoginFields: View {
     private func animateViews() {
         DispatchQueue.main.async {
             withAnimation(.easeOut(duration: animationDuration).delay(animationDelay + 0.2)) {
-                animateEmail.toggle()
+                animateEmail = true
             }
             withAnimation(.easeOut(duration: animationDuration).delay(animationDelay + 0.4)) {
-                animatePassword.toggle()
+                animatePassword = true
             }
             withAnimation(.easeIn(duration: animationDuration).delay(animationDelay + 0.6)) {
-                animateLogin.toggle()
+                animateLogin = true
             }
         }
     }

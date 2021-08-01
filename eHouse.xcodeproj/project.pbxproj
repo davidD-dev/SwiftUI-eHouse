@@ -19,6 +19,9 @@
 		C479677426B44E8100E592BC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479677326B44E8100E592BC /* LoginView.swift */; };
 		C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479677626B4525200E592BC /* GradientButtonStyle.swift */; };
 		C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479677F26B4597E00E592BC /* ScreenTitle.swift */; };
+		C4C6415926B6CBFF003FBFE4 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415826B6CBFF003FBFE4 /* EmailField.swift */; };
+		C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415B26B6D384003FBFE4 /* PasswordRsetView.swift */; };
+		C4C6415F26B6D3D0003FBFE4 /* RegisterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		C479677326B44E8100E592BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C479677626B4525200E592BC /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		C479677F26B4597E00E592BC /* ScreenTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitle.swift; sourceTree = "<group>"; };
+		C4C6415826B6CBFF003FBFE4 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		C4C6415B26B6D384003FBFE4 /* PasswordRsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRsetView.swift; sourceTree = "<group>"; };
+		C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 		C479675E26B42CC400E592BC /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C4C6415D26B6D39A003FBFE4 /* register */,
+				C4C6415A26B6D36C003FBFE4 /* passwordReset */,
 				C479677126B44E1C00E592BC /* onboarding */,
 				C479677226B44E2E00E592BC /* login */,
 			);
@@ -107,7 +115,7 @@
 		C479676626B43B1F00E592BC /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				C479677E26B4591D00E592BC /* views */,
+				C479677E26B4591D00E592BC /* subViews */,
 				C479677926B4556000E592BC /* modifiers */,
 				C479677826B4555700E592BC /* extensions */,
 				C479676726B43B2D00E592BC /* Constant.swift */,
@@ -118,8 +126,8 @@
 		C479677126B44E1C00E592BC /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				C479677A26B455C800E592BC /* model */,
-				C479677B26B455D300E592BC /* view */,
+				C479677A26B455C800E592BC /* models */,
+				C479677B26B455D300E592BC /* views */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -127,8 +135,8 @@
 		C479677226B44E2E00E592BC /* login */ = {
 			isa = PBXGroup;
 			children = (
-				C479677D26B455F100E592BC /* model */,
-				C479677C26B455EB00E592BC /* view */,
+				C479677D26B455F100E592BC /* models */,
+				C479677C26B455EB00E592BC /* views */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -149,42 +157,75 @@
 			path = modifiers;
 			sourceTree = "<group>";
 		};
-		C479677A26B455C800E592BC /* model */ = {
+		C479677A26B455C800E592BC /* models */ = {
 			isa = PBXGroup;
 			children = (
 				C479676426B43A9C00E592BC /* OnboardingItem.swift */,
 			);
-			path = model;
+			path = models;
 			sourceTree = "<group>";
 		};
-		C479677B26B455D300E592BC /* view */ = {
+		C479677B26B455D300E592BC /* views */ = {
 			isa = PBXGroup;
 			children = (
 				C479676026B42D0E00E592BC /* OnboardingView.swift */,
 				C479676926B43D7900E592BC /* OnboardingItemView.swift */,
 			);
-			path = view;
+			path = views;
 			sourceTree = "<group>";
 		};
-		C479677C26B455EB00E592BC /* view */ = {
+		C479677C26B455EB00E592BC /* views */ = {
 			isa = PBXGroup;
 			children = (
 				C479677326B44E8100E592BC /* LoginView.swift */,
 			);
-			path = view;
+			path = views;
 			sourceTree = "<group>";
 		};
-		C479677D26B455F100E592BC /* model */ = {
+		C479677D26B455F100E592BC /* models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = model;
+			path = models;
 			sourceTree = "<group>";
 		};
-		C479677E26B4591D00E592BC /* views */ = {
+		C479677E26B4591D00E592BC /* subViews */ = {
 			isa = PBXGroup;
 			children = (
 				C479677F26B4597E00E592BC /* ScreenTitle.swift */,
+				C4C6415826B6CBFF003FBFE4 /* EmailField.swift */,
+			);
+			path = subViews;
+			sourceTree = "<group>";
+		};
+		C4C6415A26B6D36C003FBFE4 /* passwordReset */ = {
+			isa = PBXGroup;
+			children = (
+				C4C6416126B6D804003FBFE4 /* views */,
+			);
+			path = passwordReset;
+			sourceTree = "<group>";
+		};
+		C4C6415D26B6D39A003FBFE4 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				C4C6416026B6D7F2003FBFE4 /* views */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		C4C6416026B6D7F2003FBFE4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C4C6416126B6D804003FBFE4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C4C6415B26B6D384003FBFE4 /* PasswordRsetView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -263,11 +304,14 @@
 				C479676126B42D0E00E592BC /* OnboardingView.swift in Sources */,
 				C479676526B43A9C00E592BC /* OnboardingItem.swift in Sources */,
 				C479676826B43B2D00E592BC /* Constant.swift in Sources */,
+				C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */,
 				C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */,
 				C479677426B44E8100E592BC /* LoginView.swift in Sources */,
 				C479677026B44CA400E592BC /* ColorExtensions.swift in Sources */,
 				C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */,
 				C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */,
+				C4C6415926B6CBFF003FBFE4 /* EmailField.swift in Sources */,
+				C4C6415F26B6D3D0003FBFE4 /* RegisterTypeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

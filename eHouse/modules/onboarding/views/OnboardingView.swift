@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     
+    @State private var showLogin = false
+    
     var onboardingData: [OnboardingItem] = [
         OnboardingItem(imageName: K.OnbImages.findPlace, title: "Find PLaces to lives", description: "Find great verified places & people to share the home with."),
         OnboardingItem(imageName: K.OnbImages.match, title: "Match Your Preferences", description: "Tell us your preferences and match with the right people."),
@@ -25,17 +27,20 @@ struct OnboardingView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             
-            Button(action: {}, label: {
+            Button(action: {  }, label: {
                 Text("GET STARTED")
                     .bold()
                     .textStyle(GradientButtonStyle())
             })
             
-            Button(action: {}, label: {
+            Button(action: { showLogin.toggle() }, label: {
                 Text("Login")
                     .padding()
                     .foregroundColor(.text)
             })
+        }
+        .fullScreenCover(isPresented: $showLogin) {
+            LoginView()
         }
     }
 }

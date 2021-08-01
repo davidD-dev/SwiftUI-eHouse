@@ -10,6 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     
     @State private var showLogin = false
+    @State private var animateLogin = false
+    @State private var animate = false
     
     var onboardingData: [OnboardingItem] = [
         OnboardingItem(imageName: K.OnbImages.findPlace, title: "Find PLaces to lives", description: "Find great verified places & people to share the home with."),
@@ -26,24 +28,48 @@ struct OnboardingView: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            .offset(x: animate ? 0 : 400)
             
             Button(action: {  }, label: {
                 Text("GET STARTED")
                     .bold()
                     .textStyle(GradientButtonStyle())
             })
+            .offset(x: animate ? 0 : -400)
+            .padding(.top, 25)
+            .padding(.bottom, 20)
             
             Button(action: { showLogin.toggle() }, label: {
                 Text("Login")
                     .padding()
                     .foregroundColor(.text)
+                    .opacity(animateLogin ? 1 : 0)
             })
+        }
+        .onAppear {
+           animateView()
         }
         .fullScreenCover(isPresented: $showLogin) {
             LoginView()
         }
     }
+    
+    //MARK:- utils
+
+    func animateView() {
+        withAnimation(.linear(duration: 2)) {
+            animateLogin.toggle()
+        }
+        
+        withAnimation(Animation.interpolatingSpring(stiffness: 40, damping: 8)) {
+            animate.toggle()
+        }
+    }
 }
+
+
+
+//MARK:- Preview
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {

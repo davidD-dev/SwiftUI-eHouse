@@ -35,7 +35,11 @@ struct LoginView: View {
                     Text("Don't have eHome account ?")
                         .foregroundColor(.title)
                     NavigationLink(
-                        destination: RegisterTypeView()) {
+                        destination: RegisterTypeView()
+                            // Créé un environement object de type
+                            // UserOnboardingDetails pour stocker
+                            // les datas tout le long du process
+                            .environmentObject(UserOnboardingDetails())) {
                         Text("Sign Up")
                             .foregroundColor(.blue)
                     }
@@ -67,6 +71,7 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .environmentObject(UserOnboardingDetails())
     }
 }
 

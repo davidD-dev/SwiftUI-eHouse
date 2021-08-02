@@ -28,6 +28,9 @@
 		C4C6416726B6F5E1003FBFE4 /* AnimatedWaveBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6416626B6F5E1003FBFE4 /* AnimatedWaveBackground.swift */; };
 		C4FA669F26B83D0B00A4CE64 /* RegisterPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FA669E26B83D0B00A4CE64 /* RegisterPlaceView.swift */; };
 		C4FA66A126B83F5800A4CE64 /* UserOnboardingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FA66A026B83F5800A4CE64 /* UserOnboardingDetails.swift */; };
+		C4FA66A326B84A2800A4CE64 /* RegisterPlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FA66A226B84A2800A4CE64 /* RegisterPlaceCard.swift */; };
+		C4FA66A526B84AED00A4CE64 /* RegisterMoveDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FA66A426B84AED00A4CE64 /* RegisterMoveDetailsView.swift */; };
+		C4FA66A726B84B1900A4CE64 /* RegisterProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FA66A626B84B1900A4CE64 /* RegisterProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		C4C6416626B6F5E1003FBFE4 /* AnimatedWaveBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedWaveBackground.swift; sourceTree = "<group>"; };
 		C4FA669E26B83D0B00A4CE64 /* RegisterPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlaceView.swift; sourceTree = "<group>"; };
 		C4FA66A026B83F5800A4CE64 /* UserOnboardingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingDetails.swift; sourceTree = "<group>"; };
+		C4FA66A226B84A2800A4CE64 /* RegisterPlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlaceCard.swift; sourceTree = "<group>"; };
+		C4FA66A426B84AED00A4CE64 /* RegisterMoveDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoveDetailsView.swift; sourceTree = "<group>"; };
+		C4FA66A626B84B1900A4CE64 /* RegisterProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +250,9 @@
 				C47E189E26B833BC005B270E /* RegisterTypeCard.swift */,
 				C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */,
 				C4FA669E26B83D0B00A4CE64 /* RegisterPlaceView.swift */,
+				C4FA66A226B84A2800A4CE64 /* RegisterPlaceCard.swift */,
+				C4FA66A426B84AED00A4CE64 /* RegisterMoveDetailsView.swift */,
+				C4FA66A626B84B1900A4CE64 /* RegisterProfileView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -335,10 +344,13 @@
 				C4C6416726B6F5E1003FBFE4 /* AnimatedWaveBackground.swift in Sources */,
 				C479676826B43B2D00E592BC /* Constant.swift in Sources */,
 				C4C6416326B6E93E003FBFE4 /* LoginFields.swift in Sources */,
+				C4FA66A526B84AED00A4CE64 /* RegisterMoveDetailsView.swift in Sources */,
 				C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */,
+				C4FA66A326B84A2800A4CE64 /* RegisterPlaceCard.swift in Sources */,
 				C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */,
 				C4C6416526B6F144003FBFE4 /* AnimatedWave.swift in Sources */,
 				C479677426B44E8100E592BC /* LoginView.swift in Sources */,
+				C4FA66A726B84B1900A4CE64 /* RegisterProfileView.swift in Sources */,
 				C479677026B44CA400E592BC /* ColorExtensions.swift in Sources */,
 				C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */,
 				C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */,

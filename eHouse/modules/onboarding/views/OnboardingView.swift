@@ -14,7 +14,7 @@ struct OnboardingView: View {
     @State private var animate = false
     
     var onboardingData: [OnboardingItem] = [
-        OnboardingItem(imageName: K.OnbImages.findPlace, title: "Find PLaces to lives", description: "Find great verified places & people to share the home with."),
+        OnboardingItem(imageName: K.OnbImages.findPlace, title: "Find Places to lives", description: "Find great verified places & people to share the home with."),
         OnboardingItem(imageName: K.OnbImages.match, title: "Match Your Preferences", description: "Tell us your preferences and match with the right people."),
         OnboardingItem(imageName: K.OnbImages.like, title: "Like minded", description: "Live together with people who will inspire like you.")
     ]

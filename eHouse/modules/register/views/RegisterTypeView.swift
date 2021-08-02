@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RegisterTypeView: View {
-    
     let gridColumns = [
         GridItem(.flexible()),
         GridItem(.flexible()),

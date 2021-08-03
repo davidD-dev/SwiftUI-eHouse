@@ -28,17 +28,11 @@ struct LoginFields: View {
                     .padding(.horizontal, 20)
                     .offset(x: animateEmail ? 0 : xOffset)
                     .opacity(animateEmail ? 1 : 0)
-                HStack {
-                    Image(systemName: "key")
-                        .foregroundColor(.text.opacity(0.7))
-                    SecureField("Password", text: $password)
-                }
-                .font(.title3)
-                .padding(8)
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.text.opacity(0.7), lineWidth: 1))
-                .padding(.horizontal, 20)
-                .offset(x: animatePassword ? 0 : xOffset)
-                .opacity(animatePassword ? 1 : 0)
+                
+                PasswordField(password: $password)
+                    .padding(.horizontal, 20)
+                    .offset(x: animatePassword ? 0 : xOffset)
+                    .opacity(animatePassword ? 1 : 0)
                 
             }
 

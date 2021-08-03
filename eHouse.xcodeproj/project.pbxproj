@@ -20,6 +20,10 @@
 		C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479677626B4525200E592BC /* GradientButtonStyle.swift */; };
 		C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479677F26B4597E00E592BC /* ScreenTitle.swift */; };
 		C47E189F26B833BC005B270E /* RegisterTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E189E26B833BC005B270E /* RegisterTypeCard.swift */; };
+		C495B8FB26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495B8FA26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift */; };
+		C495B8FE26B98FE900B1AFC8 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495B8FD26B98FE900B1AFC8 /* PasswordField.swift */; };
+		C495B90126B995BF00B1AFC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495B90026B995BF00B1AFC8 /* HomeView.swift */; };
+		C495B90326B9965100B1AFC8 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495B90226B9965100B1AFC8 /* ViewExtensions.swift */; };
 		C4C6415926B6CBFF003FBFE4 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415826B6CBFF003FBFE4 /* EmailField.swift */; };
 		C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415B26B6D384003FBFE4 /* PasswordRsetView.swift */; };
 		C4C6415F26B6D3D0003FBFE4 /* RegisterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */; };
@@ -49,6 +53,10 @@
 		C479677626B4525200E592BC /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		C479677F26B4597E00E592BC /* ScreenTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitle.swift; sourceTree = "<group>"; };
 		C47E189E26B833BC005B270E /* RegisterTypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeCard.swift; sourceTree = "<group>"; };
+		C495B8FA26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoveDetailsContent.swift; sourceTree = "<group>"; };
+		C495B8FD26B98FE900B1AFC8 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		C495B90026B995BF00B1AFC8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C495B90226B9965100B1AFC8 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		C4C6415826B6CBFF003FBFE4 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		C4C6415B26B6D384003FBFE4 /* PasswordRsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRsetView.swift; sourceTree = "<group>"; };
 		C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeView.swift; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 		C479675E26B42CC400E592BC /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C495B8FF26B995AA00B1AFC8 /* Home */,
 				C4C6415D26B6D39A003FBFE4 /* register */,
 				C4C6415A26B6D36C003FBFE4 /* passwordReset */,
 				C479677126B44E1C00E592BC /* onboarding */,
@@ -163,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				C479676F26B44CA400E592BC /* ColorExtensions.swift */,
+				C495B90226B9965100B1AFC8 /* ViewExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -215,6 +225,7 @@
 			children = (
 				C479677F26B4597E00E592BC /* ScreenTitle.swift */,
 				C4C6415826B6CBFF003FBFE4 /* EmailField.swift */,
+				C495B8FD26B98FE900B1AFC8 /* PasswordField.swift */,
 			);
 			path = subViews;
 			sourceTree = "<group>";
@@ -225,6 +236,49 @@
 				C4FA66A026B83F5800A4CE64 /* UserOnboardingDetails.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		C495B8F726B9828300B1AFC8 /* registerType */ = {
+			isa = PBXGroup;
+			children = (
+				C47E189E26B833BC005B270E /* RegisterTypeCard.swift */,
+				C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */,
+			);
+			path = registerType;
+			sourceTree = "<group>";
+		};
+		C495B8F826B9829500B1AFC8 /* registerPlace */ = {
+			isa = PBXGroup;
+			children = (
+				C4FA669E26B83D0B00A4CE64 /* RegisterPlaceView.swift */,
+				C4FA66A226B84A2800A4CE64 /* RegisterPlaceCard.swift */,
+			);
+			path = registerPlace;
+			sourceTree = "<group>";
+		};
+		C495B8F926B982A500B1AFC8 /* registerMoveDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4FA66A426B84AED00A4CE64 /* RegisterMoveDetailsView.swift */,
+				C495B8FA26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift */,
+			);
+			path = registerMoveDetails;
+			sourceTree = "<group>";
+		};
+		C495B8FC26B986A000B1AFC8 /* registerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C4FA66A626B84B1900A4CE64 /* RegisterProfileView.swift */,
+			);
+			path = registerProfile;
+			sourceTree = "<group>";
+		};
+		C495B8FF26B995AA00B1AFC8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C495B90026B995BF00B1AFC8 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C4C6415A26B6D36C003FBFE4 /* passwordReset */ = {
@@ -247,12 +301,10 @@
 		C4C6416026B6D7F2003FBFE4 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				C47E189E26B833BC005B270E /* RegisterTypeCard.swift */,
-				C4C6415E26B6D3D0003FBFE4 /* RegisterTypeView.swift */,
-				C4FA669E26B83D0B00A4CE64 /* RegisterPlaceView.swift */,
-				C4FA66A226B84A2800A4CE64 /* RegisterPlaceCard.swift */,
-				C4FA66A426B84AED00A4CE64 /* RegisterMoveDetailsView.swift */,
-				C4FA66A626B84B1900A4CE64 /* RegisterProfileView.swift */,
+				C495B8F726B9828300B1AFC8 /* registerType */,
+				C495B8F826B9829500B1AFC8 /* registerPlace */,
+				C495B8F926B982A500B1AFC8 /* registerMoveDetails */,
+				C495B8FC26B986A000B1AFC8 /* registerProfile */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -335,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C495B8FB26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift in Sources */,
 				C479676A26B43D7900E592BC /* OnboardingItemView.swift in Sources */,
 				C479676126B42D0E00E592BC /* OnboardingView.swift in Sources */,
 				C47E189F26B833BC005B270E /* RegisterTypeCard.swift in Sources */,
@@ -349,11 +402,14 @@
 				C4FA66A326B84A2800A4CE64 /* RegisterPlaceCard.swift in Sources */,
 				C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */,
 				C4C6416526B6F144003FBFE4 /* AnimatedWave.swift in Sources */,
+				C495B8FE26B98FE900B1AFC8 /* PasswordField.swift in Sources */,
 				C479677426B44E8100E592BC /* LoginView.swift in Sources */,
 				C4FA66A726B84B1900A4CE64 /* RegisterProfileView.swift in Sources */,
+				C495B90326B9965100B1AFC8 /* ViewExtensions.swift in Sources */,
 				C479677026B44CA400E592BC /* ColorExtensions.swift in Sources */,
 				C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */,
 				C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */,
+				C495B90126B995BF00B1AFC8 /* HomeView.swift in Sources */,
 				C4C6415926B6CBFF003FBFE4 /* EmailField.swift in Sources */,
 				C4C6415F26B6D3D0003FBFE4 /* RegisterTypeView.swift in Sources */,
 			);

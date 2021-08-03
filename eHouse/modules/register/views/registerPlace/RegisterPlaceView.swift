@@ -29,6 +29,7 @@ struct RegisterPlaceView: View {
                 RegisterPlaceCard(image: K.CitiesImages.paris, city: "Paris", country: "France")
             }
         }
+        .navigationTitle("Step 2-4")
     }
 }
 

@@ -19,7 +19,7 @@ struct RegisterPlaceCard: View {
     var body: some View {
         
         NavigationLink(
-            destination: RegisterMoveDetailsView(), isActive: $readyToNavigate) {
+            destination: RegisterMoveDetailsView().environmentObject(onboardingDetails), isActive: $readyToNavigate) {
             Button(action: onClick) {
                 VStack(alignment: .leading) {
                     Image(image)

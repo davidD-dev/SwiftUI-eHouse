@@ -14,6 +14,7 @@ struct ScreenTitle: View {
         self.title = title
     }
     
+    
     var body: some View {
         HStack {
             Text(title)

@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
-    
+struct LoginView: View {    
     @State private var userEmail: String = ""
     @State private var password: String = ""
     
@@ -30,6 +29,8 @@ struct LoginView: View {
                 })
                 .opacity(animateLogin ? 1 : 0)
                 .offset(x: animateLogin ? 0 : -200)
+                
+                
                 Spacer()
                 HStack {
                     Text("Don't have eHome account ?")

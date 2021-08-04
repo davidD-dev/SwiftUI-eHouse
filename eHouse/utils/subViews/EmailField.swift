@@ -17,9 +17,7 @@ struct EmailField: View {
                 // Permet de spécifié le type de clavier qui sera
                 // afficher quand on tape sur le textField
                 .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-                .disabled(true)
-            
+                .autocapitalization(.none)            
         }
         .font(.title3)
         .padding(8)

@@ -11,6 +11,8 @@
 		C40E9BD626BAD475000296A7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BD526BAD475000296A7 /* AuthService.swift */; };
 		C40E9BDA26BAD54A000296A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BD926BAD54A000296A7 /* User.swift */; };
 		C40E9BDD26BAD77E000296A7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */; };
+		C40E9BE026BADB8E000296A7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BDF26BADB8E000296A7 /* RegisterViewModel.swift */; };
+		C40E9BE626BAE052000296A7 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BE526BAE052000296A7 /* UserValidator.swift */; };
 		C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479674E26B42BC100E592BC /* eHouseApp.swift */; };
 		C479675326B42BC500E592BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675226B42BC500E592BC /* Assets.xcassets */; };
 		C479675626B42BC500E592BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675526B42BC500E592BC /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		C40E9BD526BAD475000296A7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C40E9BD926BAD54A000296A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C40E9BDF26BADB8E000296A7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C40E9BE526BAE052000296A7 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		C479674B26B42BC100E592BC /* eHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479674E26B42BC100E592BC /* eHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eHouseApp.swift; sourceTree = "<group>"; };
 		C479675226B42BC500E592BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		C40E9BD726BAD536000296A7 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C40E9BE426BAE03E000296A7 /* validators */,
 				C40E9BD826BAD53C000296A7 /* models */,
 			);
 			path = User;
@@ -134,6 +139,22 @@
 				C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */,
 			);
 			path = viewModels;
+			sourceTree = "<group>";
+		};
+		C40E9BDE26BADB5D000296A7 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BDF26BADB8E000296A7 /* RegisterViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		C40E9BE426BAE03E000296A7 /* validators */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BE526BAE052000296A7 /* UserValidator.swift */,
+			);
+			path = validators;
 			sourceTree = "<group>";
 		};
 		C479674226B42BC100E592BC = {
@@ -354,6 +375,7 @@
 			children = (
 				C47E189D26B8335F005B270E /* models */,
 				C4C6416026B6D7F2003FBFE4 /* views */,
+				C40E9BDE26BADB5D000296A7 /* viewModels */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -448,9 +470,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C495B8FB26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift in Sources */,
+				C40E9BE026BADB8E000296A7 /* RegisterViewModel.swift in Sources */,
 				C479676A26B43D7900E592BC /* OnboardingItemView.swift in Sources */,
 				C479676126B42D0E00E592BC /* OnboardingView.swift in Sources */,
 				C47E189F26B833BC005B270E /* RegisterTypeCard.swift in Sources */,
+				C40E9BE626BAE052000296A7 /* UserValidator.swift in Sources */,
 				C4FA669F26B83D0B00A4CE64 /* RegisterPlaceView.swift in Sources */,
 				C4FA66A126B83F5800A4CE64 /* UserOnboardingDetails.swift in Sources */,
 				C479676526B43A9C00E592BC /* OnboardingItem.swift in Sources */,

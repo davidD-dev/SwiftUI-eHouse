@@ -9,8 +9,12 @@ import SwiftUI
 
 struct PasswordRsetView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var email: String = ""
-    @State private var showAlert: Bool = false
+    
+    @StateObject var passwordResetViewModel = PasswordResetViewModel()
+    
+    
+    
+    
     var body: some View {
         ZStack {
             AnimatedWaveBackground()
@@ -20,9 +24,9 @@ struct PasswordRsetView: View {
                 Text("PLease enter your email below to receive your password reset instructions.")
                     .foregroundColor(.text)
                     .padding(.horizontal, 20)
-                EmailField(email: $email)
+                EmailField(email: $passwordResetViewModel.email)
                     .padding(20)
-                Button(action: { showAlert.toggle() }){
+                Button(action: passwordResetViewModel.sendPasswordReset){
                     Text("SEND REQUEST")
                         .bold()
                         .textStyle(GradientButtonStyle())
@@ -31,15 +35,15 @@ struct PasswordRsetView: View {
                 Spacer()
                 
             }
-            .alert(isPresented: $showAlert) {
+            .alert(isPresented: $passwordResetViewModel.showingAlert) {
                 displayAlert()
         }
         }
     }
     
-    //MARK:- Utils
+    //MARK:- Methods
     
-    private func displayAlert() -> Alert {
+    fileprivate func displayAlert() -> Alert {
         Alert(title: Text("Success"), message: Text("An email with the instructions has been sent to your email."), dismissButton: .default(Text("Go it!"), action: {
             presentationMode.wrappedValue.dismiss()
         }))

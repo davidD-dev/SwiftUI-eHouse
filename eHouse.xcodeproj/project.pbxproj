@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40E9BD326BAD2FC000296A7 /* PassworrdResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BD226BAD2FC000296A7 /* PassworrdResetViewModel.swift */; };
+		C40E9BD626BAD475000296A7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BD526BAD475000296A7 /* AuthService.swift */; };
+		C40E9BDA26BAD54A000296A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BD926BAD54A000296A7 /* User.swift */; };
+		C40E9BDD26BAD77E000296A7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */; };
 		C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479674E26B42BC100E592BC /* eHouseApp.swift */; };
 		C479675326B42BC500E592BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675226B42BC500E592BC /* Assets.xcassets */; };
 		C479675626B42BC500E592BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675526B42BC500E592BC /* Preview Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40E9BD226BAD2FC000296A7 /* PassworrdResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassworrdResetViewModel.swift; sourceTree = "<group>"; };
+		C40E9BD526BAD475000296A7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C40E9BD926BAD54A000296A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C479674B26B42BC100E592BC /* eHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479674E26B42BC100E592BC /* eHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eHouseApp.swift; sourceTree = "<group>"; };
 		C479675226B42BC500E592BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +89,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40E9BD026BAD2B3000296A7 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BD226BAD2FC000296A7 /* PassworrdResetViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		C40E9BD126BAD2C8000296A7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C40E9BD426BAD436000296A7 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BD526BAD475000296A7 /* AuthService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		C40E9BD726BAD536000296A7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BD826BAD53C000296A7 /* models */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C40E9BD826BAD53C000296A7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BD926BAD54A000296A7 /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C40E9BDB26BAD758000296A7 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		C479674226B42BC100E592BC = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +157,7 @@
 			children = (
 				C479675D26B42CBC00E592BC /* application */,
 				C479675E26B42CC400E592BC /* modules */,
+				C40E9BD426BAD436000296A7 /* services */,
 				C479676626B43B1F00E592BC /* utils */,
 				C479675226B42BC500E592BC /* Assets.xcassets */,
 				C479675726B42BC500E592BC /* Info.plist */,
@@ -130,6 +186,7 @@
 		C479675E26B42CC400E592BC /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C40E9BD726BAD536000296A7 /* User */,
 				C495B8FF26B995AA00B1AFC8 /* Home */,
 				C4C6415D26B6D39A003FBFE4 /* register */,
 				C4C6415A26B6D36C003FBFE4 /* passwordReset */,
@@ -164,6 +221,7 @@
 			children = (
 				C479677D26B455F100E592BC /* models */,
 				C479677C26B455EB00E592BC /* views */,
+				C40E9BDB26BAD758000296A7 /* viewModels */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -284,7 +342,9 @@
 		C4C6415A26B6D36C003FBFE4 /* passwordReset */ = {
 			isa = PBXGroup;
 			children = (
+				C40E9BD126BAD2C8000296A7 /* models */,
 				C4C6416126B6D804003FBFE4 /* views */,
+				C40E9BD026BAD2B3000296A7 /* viewModels */,
 			);
 			path = passwordReset;
 			sourceTree = "<group>";
@@ -407,10 +467,14 @@
 				C4FA66A726B84B1900A4CE64 /* RegisterProfileView.swift in Sources */,
 				C495B90326B9965100B1AFC8 /* ViewExtensions.swift in Sources */,
 				C479677026B44CA400E592BC /* ColorExtensions.swift in Sources */,
+				C40E9BDA26BAD54A000296A7 /* User.swift in Sources */,
+				C40E9BDD26BAD77E000296A7 /* LoginViewModel.swift in Sources */,
 				C479678026B4597E00E592BC /* ScreenTitle.swift in Sources */,
+				C40E9BD626BAD475000296A7 /* AuthService.swift in Sources */,
 				C479677726B4525200E592BC /* GradientButtonStyle.swift in Sources */,
 				C495B90126B995BF00B1AFC8 /* HomeView.swift in Sources */,
 				C4C6415926B6CBFF003FBFE4 /* EmailField.swift in Sources */,
+				C40E9BD326BAD2FC000296A7 /* PassworrdResetViewModel.swift in Sources */,
 				C4C6415F26B6D3D0003FBFE4 /* RegisterTypeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

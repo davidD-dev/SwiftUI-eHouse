@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {    
-    @State private var userEmail: String = ""
-    @State private var password: String = ""
+    
+    @StateObject private var loginViewModel = LoginViewModel()
     
     @State private var animateLogin = false
     
@@ -20,9 +20,12 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 ScreenTitle("Hi, \nWelcome back !")
-                LoginFields(email: $userEmail, password: $password)
+                LoginFields(email: $loginViewModel.email, password: $loginViewModel.password)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    hideKeyboard()
+                    loginViewModel.loginUser()
+                }, label: {
                     Text("LOGIN")
                         .bold()
                         .textStyle(GradientButtonStyle())
@@ -51,6 +54,9 @@ struct LoginView: View {
             .onAppear {
                 animateViews()
             }
+        }
+        .fullScreenCover(isPresented: $loginViewModel.loginSuccessful) {
+            HomeView()
         }
     }
     

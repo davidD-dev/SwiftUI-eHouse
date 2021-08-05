@@ -14,38 +14,44 @@ struct RegisterProfileView: View {
     @State var testPick = 0
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                fullNameField()
-                
-                phoneNumberField()
-                
-                
-                genderPickerField()
-                
-                emailAndPasswordPart()
-                
-                
-                moreAboutYoutField()
-                
-                Spacer()
-                
-                NavigationLink(
-                    destination: HomeView(), isActive: $registerViewModel.registerSuccessful) {
-                    Button(action: registerViewModel.register) {
-                        Text("REGISTER")
-                            .bold()
-                            .textStyle(GradientButtonStyle())
+        ZStack {
+            ScrollView {
+                VStack(spacing: 16) {
+                    fullNameField()
+                    
+                    phoneNumberField()
+                    
+                    
+                    genderPickerField()
+                    
+                    emailAndPasswordPart()
+                    
+                    
+                    moreAboutYoutField()
+                    
+                    Spacer()
+                    
+                    NavigationLink(
+                        destination: HomeView(), isActive: $registerViewModel.registerSuccessful) {
+                        Button(action: registerViewModel.register) {
+                            Text("REGISTER")
+                                .bold()
+                                .textStyle(GradientButtonStyle())
+                        }
                     }
                 }
+                .padding()
+                .alert(isPresented: $registerViewModel.errorOccured) {
+                    Alert(title: Text("Error"), message: Text(registerViewModel.errorMessage))
+                }
+                
             }
-            .padding()
-            .alert(isPresented: $registerViewModel.errorOccured) {
-                Alert(title: Text("Error"), message: Text(registerViewModel.errorMessage))
+            .navigationTitle("Complete your profile")
+            if registerViewModel.loading {
+                LoadingView()
+                    .navigationBarHidden(true)
             }
-            
         }
-        .navigationTitle("Complete your profile")
     }
     
     //MARK:- Methods

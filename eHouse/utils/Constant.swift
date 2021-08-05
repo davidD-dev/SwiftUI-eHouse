@@ -37,4 +37,8 @@ struct K {
         static let tenant = "ic_tenant"
     }
     
+    struct AnimationsNames {
+        static let loadingHouse = "loading-house"
+    }
+    
 }

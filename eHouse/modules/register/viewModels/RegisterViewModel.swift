@@ -23,6 +23,8 @@ class RegisterViewModel: ObservableObject {
     
     @Published var registerSuccessful = false
     
+    @Published var loading = false
+    
     
     let genders = ["Male", "Female", "Cactus"]
     
@@ -42,8 +44,8 @@ class RegisterViewModel: ObservableObject {
             errorMessage = "The \(userValidator.getFieldIncorrect()) field is empty, please check."
             return
         }
-        
-        registerSuccessful = true
+        loading = true
+//        registerSuccessful = true
         
     }
 }

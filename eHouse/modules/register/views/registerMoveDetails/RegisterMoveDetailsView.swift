@@ -16,7 +16,7 @@ struct RegisterMoveDetailsView: View {
                 .padding(.top, 40)
             Spacer()
             NavigationLink(
-                destination: RegisterProfileView()) {
+                destination: RegisterProfileView().environmentObject(onboardingDetails)) {
                 Text("NEXT")
                     .bold()
                     .textStyle(GradientButtonStyle())

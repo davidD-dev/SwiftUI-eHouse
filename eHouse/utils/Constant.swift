@@ -41,4 +41,9 @@ struct K {
         static let loadingHouse = "loading-house"
     }
     
+    struct FirebaseCollections {
+        static let USER_COLLECTION = "users"
+        static let ROOM_COLLECTION = "rooms"
+    }
+    
 }

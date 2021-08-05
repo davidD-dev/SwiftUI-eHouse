@@ -22,7 +22,6 @@ class RegisterViewModel: ObservableObject {
     
     
     @Published var registerSuccessful = false
-    
     @Published var loading = false
     
     
@@ -30,7 +29,9 @@ class RegisterViewModel: ObservableObject {
     
     private var userValidator = UserValidator()
     
-    func register() {
+    private var authService = AuthService()
+    
+    func register(with onboardingDetails: UserOnboardingDetails) {
         let user = User(email: email,
                         phoneNumber: phoneNumber,
                         gender: genders[selectedGender],
@@ -44,8 +45,28 @@ class RegisterViewModel: ObservableObject {
             errorMessage = "The \(userValidator.getFieldIncorrect()) field is empty, please check."
             return
         }
+        
+        user.set(onboardingDetails: onboardingDetails)
+        
         loading = true
-//        registerSuccessful = true
+        
+        authService.resgister(user: user) { err in
+            guard err == nil else {
+                // Doit être sur le main thread car on change des propriétés qui affecte l'UI
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.loading = false
+                    self.registerSuccessful = false
+                    self.errorOccured = true
+                    self.errorMessage = err!.localizedDescription
+                }
+                return
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.loading = false
+                self.registerSuccessful = true
+            }
+        }
+        
         
     }
 }

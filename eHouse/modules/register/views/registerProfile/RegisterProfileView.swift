@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterProfileView: View {
     
+    @EnvironmentObject var onboardingDetails: UserOnboardingDetails
     @StateObject private var registerViewModel = RegisterViewModel()
     
     @State var testPick = 0
@@ -33,7 +34,10 @@ struct RegisterProfileView: View {
                     
                     NavigationLink(
                         destination: HomeView(), isActive: $registerViewModel.registerSuccessful) {
-                        Button(action: registerViewModel.register) {
+                        Button(action: {
+                            registerViewModel.register(with: onboardingDetails)
+                            
+                        }) {
                             Text("REGISTER")
                                 .bold()
                                 .textStyle(GradientButtonStyle())

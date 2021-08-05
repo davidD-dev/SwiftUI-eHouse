@@ -103,3 +103,4 @@ iOSInjectionProject/
 # Api Keys
 
 */keys.plist
+*/GoogleService-Info.plist

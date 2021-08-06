@@ -54,6 +54,9 @@ struct LoginView: View {
             .onAppear {
                 animateViews()
             }
+            .alert(isPresented: $loginViewModel.errorOccured, content: {
+                Alert(title: Text("Connexion Failed"), message: Text(loginViewModel.errorMessage))
+            })
         }
         .fullScreenCover(isPresented: $loginViewModel.loginSuccessful) {
             HomeView()

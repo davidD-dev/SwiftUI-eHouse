@@ -17,7 +17,13 @@ struct eHouseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            if UserDefaults.standard.bool(forKey: K.UserFlags.LOGGED_IN) {
+                HomeView()
+            } else if UserDefaults.standard.bool(forKey: K.UserFlags.ONBOARDED) {
+                LoginView()
+            } else  {
+                OnboardingView()
+            }
         }
     }
 }

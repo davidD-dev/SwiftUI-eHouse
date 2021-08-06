@@ -8,12 +8,28 @@
 import Foundation
 
 struct K {
+    
+    // Flags
+    struct UserFlags {
+        // The user is logged in
+        static let LOGGED_IN = "loggedIn"
+        
+        // The user has already seen the onboarding screen
+        static let ONBOARDED = "onboarded"
+        
+        static let CURRENT_USER = "currentUser"
+    }
+
+
+
+    // Onboarding view images
     struct OnbImages {
         static let findPlace = "onb_find_place"
         static let like = "onb_like"
         static let match = "onb_match"
     }
     
+    // Cities Images
     struct CitiesImages {
         static let boston = "img_boston"
         static let london = "img_london"
@@ -21,6 +37,7 @@ struct K {
         static let paris = "img_paris"
     }
     
+    // Icons
     struct IconNames {
         static let clean = "ic_clean"
         static let entirePlace = "ic_entire_place"
@@ -37,13 +54,18 @@ struct K {
         static let tenant = "ic_tenant"
     }
     
+    // Animations
     struct AnimationsNames {
         static let loadingHouse = "loading-house"
     }
     
+    // Firebase collections
     struct FirebaseCollections {
         static let USER_COLLECTION = "users"
         static let ROOM_COLLECTION = "rooms"
     }
+    
+    
+    
     
 }

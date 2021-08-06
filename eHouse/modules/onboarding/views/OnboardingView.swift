@@ -59,7 +59,8 @@ struct OnboardingView: View {
                 })
             }
             .onAppear {
-               animateView()
+                UserDefaults.standard.set(true, forKey: K.UserFlags.ONBOARDED)
+                animateView()
             }
             .sheet(isPresented: $showLogin) {
                 LoginView()

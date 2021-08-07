@@ -65,6 +65,13 @@ struct K {
         static let ROOM_COLLECTION = "rooms"
     }
     
+    struct RoomatesAvatar {
+        static let susie = "susie"
+        static let sasha = "sasha"
+        static let nyle = "nyle"
+        static let max = "max"
+    }
+    
     
     
     

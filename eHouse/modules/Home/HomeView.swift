@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct HomeView: View {
+    
+    
     var body: some View {
-        Text("HOME SWEET HOME!")
+        ZStack {
+            RoomListView()
+        }
+        .navigationBarHidden(true)
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

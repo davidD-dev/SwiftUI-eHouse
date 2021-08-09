@@ -14,6 +14,10 @@
 		C40E9BE026BADB8E000296A7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BDF26BADB8E000296A7 /* RegisterViewModel.swift */; };
 		C40E9BE626BAE052000296A7 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E9BE526BAE052000296A7 /* UserValidator.swift */; };
 		C40E9BE926BAED4D000296A7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C40E9BE826BAED4D000296A7 /* Lottie */; };
+		C4101D4F26C166FC009EE25E /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D4E26C166FC009EE25E /* SideMenuView.swift */; };
+		C4101D5226C16798009EE25E /* SideMenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5126C16798009EE25E /* SideMenuContent.swift */; };
+		C4101D5726C17001009EE25E /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5626C17001009EE25E /* SideMenuItem.swift */; };
+		C4101D5B26C17D0A009EE25E /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5A26C17D0A009EE25E /* AboutUsView.swift */; };
 		C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479674E26B42BC100E592BC /* eHouseApp.swift */; };
 		C479675326B42BC500E592BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675226B42BC500E592BC /* Assets.xcassets */; };
 		C479675626B42BC500E592BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675526B42BC500E592BC /* Preview Assets.xcassets */; };
@@ -64,6 +68,10 @@
 		C40E9BDC26BAD77E000296A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C40E9BDF26BADB8E000296A7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C40E9BE526BAE052000296A7 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
+		C4101D4E26C166FC009EE25E /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		C4101D5126C16798009EE25E /* SideMenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContent.swift; sourceTree = "<group>"; };
+		C4101D5626C17001009EE25E /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
+		C4101D5A26C17D0A009EE25E /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		C479674B26B42BC100E592BC /* eHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479674E26B42BC100E592BC /* eHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eHouseApp.swift; sourceTree = "<group>"; };
 		C479675226B42BC500E592BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +194,48 @@
 			path = validators;
 			sourceTree = "<group>";
 		};
+		C4101D4D26C166DF009EE25E /* sideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C4101D5526C16F8D009EE25E /* models */,
+				C4101D5026C16782009EE25E /* views */,
+			);
+			path = sideMenu;
+			sourceTree = "<group>";
+		};
+		C4101D5026C16782009EE25E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C4101D4E26C166FC009EE25E /* SideMenuView.swift */,
+				C4101D5126C16798009EE25E /* SideMenuContent.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C4101D5526C16F8D009EE25E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C4101D5626C17001009EE25E /* SideMenuItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C4101D5826C17CF2009EE25E /* aboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				C4101D5926C17CF9009EE25E /* views */,
+			);
+			path = aboutUs;
+			sourceTree = "<group>";
+		};
+		C4101D5926C17CF9009EE25E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C4101D5A26C17D0A009EE25E /* AboutUsView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		C479674226B42BC100E592BC = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +288,8 @@
 		C479675E26B42CC400E592BC /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C4101D5826C17CF2009EE25E /* aboutUs */,
+				C4101D4D26C166DF009EE25E /* sideMenu */,
 				C4F11D8326BEC04200AE747D /* Room */,
 				C40E9BD726BAD536000296A7 /* User */,
 				C495B8FF26B995AA00B1AFC8 /* Home */,
@@ -561,11 +613,13 @@
 			files = (
 				C495B8FB26B982F100B1AFC8 /* RegisterMoveDetailsContent.swift in Sources */,
 				C40E9BE026BADB8E000296A7 /* RegisterViewModel.swift in Sources */,
+				C4101D4F26C166FC009EE25E /* SideMenuView.swift in Sources */,
 				C479676A26B43D7900E592BC /* OnboardingItemView.swift in Sources */,
 				C479676126B42D0E00E592BC /* OnboardingView.swift in Sources */,
 				C47E189F26B833BC005B270E /* RegisterTypeCard.swift in Sources */,
 				C40E9BE626BAE052000296A7 /* UserValidator.swift in Sources */,
 				C4FA669F26B83D0B00A4CE64 /* RegisterPlaceView.swift in Sources */,
+				C4101D5226C16798009EE25E /* SideMenuContent.swift in Sources */,
 				C4FA66A126B83F5800A4CE64 /* UserOnboardingDetails.swift in Sources */,
 				C479676526B43A9C00E592BC /* OnboardingItem.swift in Sources */,
 				C4F11D8226BEBFCE00AE747D /* RoomRow.swift in Sources */,
@@ -573,6 +627,8 @@
 				C479676826B43B2D00E592BC /* Constant.swift in Sources */,
 				C4C6416326B6E93E003FBFE4 /* LoginFields.swift in Sources */,
 				C4FA66A526B84AED00A4CE64 /* RegisterMoveDetailsView.swift in Sources */,
+				C4101D5726C17001009EE25E /* SideMenuItem.swift in Sources */,
+				C4101D5B26C17D0A009EE25E /* AboutUsView.swift in Sources */,
 				C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */,
 				C4EC09F126BC16B50082A0AF /* LoadingView.swift in Sources */,
 				C4FA66A326B84A2800A4CE64 /* RegisterPlaceCard.swift in Sources */,

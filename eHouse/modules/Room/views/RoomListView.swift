@@ -12,7 +12,7 @@ struct RoomListView: View {
     @ObservedObject private var roomLisViewModel = RoomListViewModel()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ScrollView(.vertical) {
                 LazyVStack {
                     ForEach(roomLisViewModel.rooms, id: \.localId) { room in
@@ -24,8 +24,8 @@ struct RoomListView: View {
                     }
                 }
                 .background(Color.tableBackground)
-            }
-            .navigationTitle("Rooms")
+//            }
+//            .navigationTitle("Rooms")
         }
     }
 }

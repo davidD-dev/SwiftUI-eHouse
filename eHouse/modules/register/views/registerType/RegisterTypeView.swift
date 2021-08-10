@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RegisterTypeView: View {
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     let gridColumns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -32,6 +35,12 @@ struct RegisterTypeView: View {
                 .navigationTitle("Step 1-4")
             }
             .frame(maxHeight: .infinity)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackButtonView(onClick: onClick))
+    }
+    
+    fileprivate func onClick() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

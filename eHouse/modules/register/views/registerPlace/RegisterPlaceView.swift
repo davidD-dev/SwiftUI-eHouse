@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterPlaceView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @EnvironmentObject var onboardingDetails : UserOnboardingDetails
     
     let gridColumns = [
@@ -30,6 +32,12 @@ struct RegisterPlaceView: View {
             }
         }
         .navigationTitle("Step 2-4")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButtonView(onClick: onClick, text: "Step 1-4"))
+    }
+    
+    fileprivate func onClick() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

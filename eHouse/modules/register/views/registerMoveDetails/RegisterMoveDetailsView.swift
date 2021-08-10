@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterMoveDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @EnvironmentObject var onboardingDetails: UserOnboardingDetails
     
     var body: some View {
@@ -24,6 +26,12 @@ struct RegisterMoveDetailsView: View {
             }
         }
         .navigationTitle("Step 3-4")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButtonView(onClick: onClick, text: "Step 2-4"))
+    }
+    
+    fileprivate func onClick() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct BackButtonView: View {
+    
+    var onClick : () -> Void
+    var text : String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: { onClick() }, label: {
+            HStack {
+                Image(systemName: "arrow.backward")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.title)
+                Text(text)
+                    .foregroundColor(.title)
+            }
+        })
+        
     }
 }
 
 struct BackButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        BackButtonView()
+        BackButtonView(onClick: {}, text: "Go back")
     }
 }

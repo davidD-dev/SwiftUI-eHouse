@@ -18,6 +18,9 @@
 		C4101D5226C16798009EE25E /* SideMenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5126C16798009EE25E /* SideMenuContent.swift */; };
 		C4101D5726C17001009EE25E /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5626C17001009EE25E /* SideMenuItem.swift */; };
 		C4101D5B26C17D0A009EE25E /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4101D5A26C17D0A009EE25E /* AboutUsView.swift */; };
+		C45A118C26C2B27000EABAC2 /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A118B26C2B27000EABAC2 /* LogoutViewModel.swift */; };
+		C45A118E26C2B3F000EABAC2 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A118D26C2B3F000EABAC2 /* LogoutButton.swift */; };
+		C45A119426C2C61900EABAC2 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A119326C2C61900EABAC2 /* BackButtonView.swift */; };
 		C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479674E26B42BC100E592BC /* eHouseApp.swift */; };
 		C479675326B42BC500E592BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675226B42BC500E592BC /* Assets.xcassets */; };
 		C479675626B42BC500E592BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479675526B42BC500E592BC /* Preview Assets.xcassets */; };
@@ -72,6 +75,9 @@
 		C4101D5126C16798009EE25E /* SideMenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContent.swift; sourceTree = "<group>"; };
 		C4101D5626C17001009EE25E /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		C4101D5A26C17D0A009EE25E /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		C45A118B26C2B27000EABAC2 /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
+		C45A118D26C2B3F000EABAC2 /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		C45A119326C2C61900EABAC2 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		C479674B26B42BC100E592BC /* eHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479674E26B42BC100E592BC /* eHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eHouseApp.swift; sourceTree = "<group>"; };
 		C479675226B42BC500E592BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +242,31 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		C45A118826C2AFAB00EABAC2 /* logout */ = {
+			isa = PBXGroup;
+			children = (
+				C45A118926C2AFB400EABAC2 /* views */,
+				C45A118A26C2B25100EABAC2 /* viewModel */,
+			);
+			path = logout;
+			sourceTree = "<group>";
+		};
+		C45A118926C2AFB400EABAC2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C45A118D26C2B3F000EABAC2 /* LogoutButton.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C45A118A26C2B25100EABAC2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C45A118B26C2B27000EABAC2 /* LogoutViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		C479674226B42BC100E592BC = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +319,7 @@
 		C479675E26B42CC400E592BC /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C45A118826C2AFAB00EABAC2 /* logout */,
 				C4101D5826C17CF2009EE25E /* aboutUs */,
 				C4101D4D26C166DF009EE25E /* sideMenu */,
 				C4F11D8326BEC04200AE747D /* Room */,
@@ -393,6 +425,7 @@
 				C4EC09F026BC16B50082A0AF /* LoadingView.swift */,
 				C4F11D7F26BEB95F00AE747D /* UserCellRow.swift */,
 				C4F11D8126BEBFCE00AE747D /* RoomRow.swift */,
+				C45A119326C2C61900EABAC2 /* BackButtonView.swift */,
 			);
 			path = subViews;
 			sourceTree = "<group>";
@@ -626,13 +659,16 @@
 				C4C6416726B6F5E1003FBFE4 /* AnimatedWaveBackground.swift in Sources */,
 				C479676826B43B2D00E592BC /* Constant.swift in Sources */,
 				C4C6416326B6E93E003FBFE4 /* LoginFields.swift in Sources */,
+				C45A119426C2C61900EABAC2 /* BackButtonView.swift in Sources */,
 				C4FA66A526B84AED00A4CE64 /* RegisterMoveDetailsView.swift in Sources */,
+				C45A118E26C2B3F000EABAC2 /* LogoutButton.swift in Sources */,
 				C4101D5726C17001009EE25E /* SideMenuItem.swift in Sources */,
 				C4101D5B26C17D0A009EE25E /* AboutUsView.swift in Sources */,
 				C4C6415C26B6D384003FBFE4 /* PasswordRsetView.swift in Sources */,
 				C4EC09F126BC16B50082A0AF /* LoadingView.swift in Sources */,
 				C4FA66A326B84A2800A4CE64 /* RegisterPlaceCard.swift in Sources */,
 				C479674F26B42BC100E592BC /* eHouseApp.swift in Sources */,
+				C45A118C26C2B27000EABAC2 /* LogoutViewModel.swift in Sources */,
 				C4C6416526B6F144003FBFE4 /* AnimatedWave.swift in Sources */,
 				C495B8FE26B98FE900B1AFC8 /* PasswordField.swift in Sources */,
 				C4F11D8926BEC42500AE747D /* RoomListView.swift in Sources */,

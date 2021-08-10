@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct AboutUsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
-        Text("About us")
+        VStack {
+            Text("About us")
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButtonView(onClick: onClick))
+    }
+    
+    fileprivate func onClick() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

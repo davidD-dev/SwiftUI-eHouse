@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterProfileView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var onboardingDetails: UserOnboardingDetails
     @StateObject private var registerViewModel = RegisterViewModel()
     
@@ -51,6 +52,8 @@ struct RegisterProfileView: View {
                 
             }
             .navigationTitle("Complete your profile")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackButtonView(onClick: onClick, text: "Step 3-4"))
             if registerViewModel.loading {
                 LoadingView()
                     .navigationBarHidden(true)
@@ -59,6 +62,10 @@ struct RegisterProfileView: View {
     }
     
     //MARK:- Methods
+    
+    fileprivate func onClick() {
+        presentationMode.wrappedValue.dismiss()
+    }
     
     fileprivate func fullNameField() -> some View {
         return TextField("Full Name", text: $registerViewModel.fullName)

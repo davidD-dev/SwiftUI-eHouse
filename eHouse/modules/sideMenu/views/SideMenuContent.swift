@@ -43,6 +43,9 @@ struct SideMenuContent: View {
                 }
                 
                 Spacer()
+                
+                LogoutButton()
+                    .padding(.vertical, 40)
             }
             .padding(.horizontal, 20)
             .padding(.top, 40)

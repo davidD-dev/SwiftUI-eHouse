@@ -81,6 +81,22 @@ struct AuthService {
         
     }
     
+    func logout(completion: @escaping (_ error: Error?) -> Void) {
+        
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.set(false, forKey: K.UserFlags.LOGGED_IN)
+            UserDefaults.standard.set(nil, forKey: K.UserFlags.CURRENT_USER)
+            completion(nil)
+        } catch let err {
+            completion(err)
+        }
+        
+        
+        
+
+    }
+    
     private func saveUser(userId: String) {
         db.collection(K.FirebaseCollections.USER_COLLECTION)
             .whereField("userId", isEqualTo: userId)

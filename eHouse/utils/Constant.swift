@@ -57,6 +57,7 @@ struct K {
     // Animations
     struct AnimationsNames {
         static let loadingHouse = "loading-house"
+        static let error = "error"
     }
     
     // Firebase collections

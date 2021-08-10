@@ -13,9 +13,11 @@ struct SideMenuContent: View {
     
     var body: some View {
         ZStack {
-            Color(UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1))
+            Color.mainBackground
             
             VStack {
+                AvatarView(size: 60)
+                    .padding(.vertical, 20)
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(items) { item in
                         NavigationLink(
@@ -25,12 +27,12 @@ struct SideMenuContent: View {
                                     Image(systemName: item.icon)
                                         .resizable()
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.text)
                                     
                                     Text(item.text)
                                         .bold()
                                         .font(.system(size: 22))
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.text)
                                         .multilineTextAlignment(.leading)
                                     
                                     Spacer()

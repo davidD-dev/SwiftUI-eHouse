@@ -27,5 +27,6 @@ extension Color {
   static let text = Color("text")
   static let title = Color("title")
   static let wave = Color("wave")
+  static let mainBackground = Color("mainBackground")
   static let gradient = LinearGradient(gradient: Gradient(colors: [.gradientStart, .gradientEnd]), startPoint: .leading, endPoint: .trailing)
 }

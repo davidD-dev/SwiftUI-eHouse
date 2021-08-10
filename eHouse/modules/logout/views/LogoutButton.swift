@@ -18,14 +18,14 @@ struct LogoutButton: View {
                     .font(.system(size: 20))
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.text)
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
             })
             .overlay(RoundedRectangle(cornerRadius: 25)
                         .stroke(lineWidth: 1)
                         )
-            .foregroundColor(.white)
+            .foregroundColor(.text)
             
             .alert(isPresented: $logoutViewModel.errorOccured, content: {
                 Alert(title: Text("Error !"), message: Text(logoutViewModel.errorMessage))

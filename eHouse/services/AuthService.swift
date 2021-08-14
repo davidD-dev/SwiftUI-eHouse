@@ -16,7 +16,12 @@ struct AuthService {
     // Return the current user connected
     func getCurrentUser() -> User? {
         guard Auth.auth().currentUser != nil else {
+            print("ici")
             return nil
+        }
+        
+        if UserDefaults.standard.object(forKey: K.UserFlags.CURRENT_USER) == nil {
+            print("ici4")
         }
         
         if let savedUser = UserDefaults.standard.object(forKey: K.UserFlags.CURRENT_USER) as? Data {
@@ -24,7 +29,9 @@ struct AuthService {
             if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
                 return loadedUser
             }
+            print("ici2")
         }
+        print("ici3")
         return nil
     }
     
@@ -40,8 +47,8 @@ struct AuthService {
             guard result != nil else {
                 return
             }
-            self.saveUser(userId: result!.user.uid)
-            completion(nil)
+            
+            self.saveUser(userId: result!.user.uid, completion: completion)
             
         }
         
@@ -97,11 +104,12 @@ struct AuthService {
 
     }
     
-    private func saveUser(userId: String) {
+    func saveUser(userId: String, completion: @escaping (_ error: Error?) -> Void) {
         db.collection(K.FirebaseCollections.USER_COLLECTION)
             .whereField("userId", isEqualTo: userId)
             .getDocuments { query , error in
                 if error != nil {
+                    completion(error)
                     return
                 }
                 
@@ -116,6 +124,7 @@ struct AuthService {
                     
                     if let encodedUser = try? encoder.encode(user) {
                         UserDefaults.standard.set(encodedUser, forKey: K.UserFlags.CURRENT_USER)
+                        completion(nil)
                     }
                 }
                 

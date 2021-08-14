@@ -5,7 +5,7 @@
 //  Created by David Deschamps on 04/08/2021.
 //
 
-import Foundation
+import SwiftUI
 import FirebaseFirestoreSwift
 
 class User : Identifiable, Codable {
@@ -20,6 +20,7 @@ class User : Identifiable, Codable {
     let email : String
     var password : String = ""
     var confirmPassword : String = ""
+    var profilePicture : String? = UIImage(named: K.RoomatesAvatar.max)?.jpegData(compressionQuality: 1)?.base64EncodedString()
     
     //onboarding details
     var roomType = ""
@@ -51,6 +52,10 @@ class User : Identifiable, Codable {
         maxRent = onboardingDetails.maxRent
     }
     
+    func changeProfilePicture(with data: String) {
+        profilePicture = data
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case userId,
              email,
@@ -61,6 +66,7 @@ class User : Identifiable, Codable {
              roomType,
              location,
              moveInDate,
-             maxRent
+             maxRent,
+             profilePicture
     }
 }

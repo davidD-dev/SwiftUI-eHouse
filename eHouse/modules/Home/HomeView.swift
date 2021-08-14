@@ -12,12 +12,12 @@ struct HomeView: View {
     @State private var openMenu = false
     
     let menuItems : [SideMenuItem] = [
-        SideMenuItem(text: "Profile", icon: "person.fill", linkedView: AnyView(AboutUsView())),
+        SideMenuItem(text: "Profile", icon: "person.fill", linkedView: AnyView(ProfileView())),
         SideMenuItem(text: "About us", icon: "info.circle", linkedView: AnyView(AboutUsView()))
     ]
     
     var body: some View {
-        NavigationView() {
+//        NavigationView() {
             
             ZStack {
                 VStack(spacing: 0) {
@@ -43,7 +43,7 @@ struct HomeView: View {
                 openMenu = false
             }
             .navigationBarHidden(true)
-        }
+//        }
         
     }
     

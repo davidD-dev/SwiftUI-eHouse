@@ -22,16 +22,21 @@ struct LoginView: View {
                 ScreenTitle("Hi, \nWelcome back !")
                 LoginFields(email: $loginViewModel.email, password: $loginViewModel.password)
                 
-                Button(action: {
-                    hideKeyboard()
-                    loginViewModel.loginUser()
-                }, label: {
-                    Text("LOGIN")
-                        .bold()
-                        .textStyle(GradientButtonStyle())
-                })
-                .opacity(animateLogin ? 1 : 0)
-                .offset(x: animateLogin ? 0 : -200)
+                NavigationLink(
+                    destination: HomeView(),
+                    isActive: $loginViewModel.loginSuccessful,
+                    label: {
+                        Button(action: {
+                            hideKeyboard()
+                            loginViewModel.loginUser()
+                        }, label: {
+                            Text("LOGIN")
+                                .bold()
+                                .textStyle(GradientButtonStyle())
+                        })
+                        .opacity(animateLogin ? 1 : 0)
+                        .offset(x: animateLogin ? 0 : -200)
+                    })
                 
                 
                 Spacer()
@@ -58,9 +63,9 @@ struct LoginView: View {
                 Alert(title: Text("Connexion Failed"), message: Text(loginViewModel.errorMessage))
             })
         }
-        .fullScreenCover(isPresented: $loginViewModel.loginSuccessful) {
-            HomeView()
-        }
+//        .fullScreenCover(isPresented: $loginViewModel.loginSuccessful) {
+//            HomeView()
+//        }
     }
     
     //MARK:- Utils

@@ -71,6 +71,7 @@ struct K {
         static let sasha = "sasha"
         static let nyle = "nyle"
         static let max = "max"
+        static let baseAvatar = "susie"
     }
     
     
